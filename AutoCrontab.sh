@@ -35,8 +35,8 @@ echo "-----------------Suscess For Generate Script Wifi-controller--------------
 ;;
 [Ff]irewall)
 echo "Firewall"
-read -p 'Pushgateway Job ? > ' job
 read -p 'IP for Monitoring ? > ' ip
+read -p 'Pushgateway Job ? > ' job
 read -p 'Community Str ? > ' com
 read -p 'At every ?? Minute. > ' min
 crontab -l | { cat; echo "*/$min * * * * /usr/bin/python2.7 $(pwd)/Firewall.py '$ip' '$job' '$com'"; } | crontab -
