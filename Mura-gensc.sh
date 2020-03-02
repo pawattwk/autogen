@@ -49,7 +49,7 @@ read -p 'Pushgateway Job ? > ' job
 read -p 'Community Str ? > ' com
 read -p 'At every ?? Minute. > ' min
 crontab -l | { cat; echo "*/$min * * * * /usr/bin/python2.7 $(pwd)/vm-window.py '$ip' '$job' '$com'"; } | crontab -
-echo "-----------------Suscess For Generate Script Firewall-----------------"
+echo "-----------------Suscess For Generate Script VM-Widow-----------------"
 ;;
 [Vv]m01 | [Vv]m-linux)
 echo "VM-Linux"
@@ -58,7 +58,7 @@ read -p 'Pushgateway Job ? > ' job
 read -p 'Community Str ? > ' com
 read -p 'At every ?? Minute. > ' min
 crontab -l | { cat; echo "*/$min * * * * /usr/bin/python2.7 $(pwd)/vm-linux.py '$ip' '$job' '$com'"; } | crontab -
-echo "-----------------Suscess For Generate Script Firewall-----------------"
+echo "-----------------Suscess For Generate Script VM-Linux-----------------"
 ;;
 "")
 read -p " Do you want to Exit ?? [Y/N] " response
